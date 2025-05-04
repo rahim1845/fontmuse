@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Scale Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Type Scale Calculator</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="base-size">Base Font Size (px)</label>
+                <input type="number" id="base-size" value="16" min="12" max="24">
+            </div>
+            
+            <div class="control-group">
+                <label for="scale-ratio">Scale Ratio</label>
+                <select id="scale-ratio">
+                    <option value="1.067">Minor Second (1.067)</option>
+                    <option value="1.125">Major Second (1.125)</option>
+                    <option value="1.2">Minor Third (1.2)</option>
+                    <option value="1.25">Major Third (1.25)</option>
+                    <option value="1.333">Perfect Fourth (1.333)</option>
+                    <option value="1.414">Augmented Fourth (1.414)</option>
+                    <option value="1.5">Perfect Fifth (1.5)</option>
+                    <option value="1.618">Golden Ratio (1.618)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="font-suggestion">
+            <div class="control-group">
+                <label for="mood-input">Enter a mood</label>
+                <div class="mood-input-group">
+                    <input type="text" id="mood-input" placeholder="e.g., playful, professional, elegant">
+                    <button id="suggest-fonts">Suggest Fonts</button>
+                </div>
+            </div>
+            <div class="font-suggestions">
+                <div class="suggestion-item">
+                    <span class="suggestion-label">Heading Font:</span>
+                    <span id="heading-font" class="suggestion-value">Inter</span>
+                </div>
+                <div class="suggestion-item">
+                    <span class="suggestion-label">Body Font:</span>
+                    <span id="body-font" class="suggestion-value">Inter</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview">
+            <div class="preview-item">
+                <div class="preview-label">H1</div>
+                <h1>The quick brown fox jumps over the lazy dog</h1>
+            </div>
+            <div class="preview-item">
+                <div class="preview-label">H2</div>
+                <h2>The quick brown fox jumps over the lazy dog</h2>
+            </div>
+            <div class="preview-item">
+                <div class="preview-label">H3</div>
+                <h3>The quick brown fox jumps over the lazy dog</h3>
+            </div>
+            <div class="preview-item">
+                <div class="preview-label">H4</div>
+                <h4>The quick brown fox jumps over the lazy dog</h4>
+            </div>
+            <div class="preview-item">
+                <div class="preview-label">H5</div>
+                <h5>The quick brown fox jumps over the lazy dog</h5>
+            </div>
+            <div class="preview-item">
+                <div class="preview-label">H6</div>
+                <h6>The quick brown fox jumps over the lazy dog</h6>
+            </div>
+            <div class="preview-item">
+                <div class="preview-label">Paragraph</div>
+                <p>The quick brown fox jumps over the lazy dog</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
